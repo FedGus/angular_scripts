@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   onCreateSensor(new_name, new_status) {
-    this.sensors.push(new Sensor(this.sensors.length, new_name.value, new_status.checked)); 
+    this.sensors.push(new Sensor(this.sensors[this.sensors.length - 1].id + 1, new_name.value, new_status.checked)); 
   }
 }
 
