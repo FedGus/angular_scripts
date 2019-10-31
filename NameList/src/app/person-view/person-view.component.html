@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">{{inPerson.firstname}}</div>
+        <div class="col-4">{{inPerson.lastname}}</div>
+        <div class="col-4">{{inPerson.id}}</div>
+        <div>
+        <button class="btn btn-warning" (click)="showEdit()">{{addEdit}}</button> 
+
+                <button class="btn btn-danger mx-2" (click)="onDeletePerson(inPerson.id)">Удалить</button> 
+            </div>
+
+        <div *ngIf=isEdit>
+                <div class="col-12">
+                <input class="form-control" type="text" placeholder="Имя" [(ngModel)]="inPerson.firstname" name="firstname">
+                </div>
+                <div class="col-12">
+                <input class="form-control" type="text" placeholder="Фамилия" [(ngModel)]="inPerson.lastname" name="lastname">
+            </div>
+                <div class="col-12">
+                <input class="form-control" type="text" placeholder="Id" [(ngModel)]="inPerson.id" name="id">
+            </div>
+                <br>
+        </div>
+    </div>
+</div>
