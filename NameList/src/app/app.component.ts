@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.persons.push(person);
   }
 
-  onDeletePerson(id) {
-    this.persons.splice(id-1, 1);
+  onDeletePerson(inPerson) {
+    this.persons.splice(this.persons.indexOf(inPerson), 1);
   }
 }
