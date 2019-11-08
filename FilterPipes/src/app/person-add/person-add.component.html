@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="personForm">
+        <div class="row">
+            <div class="col-12">
+                <input type="text" class="form-control" placeholder="Имя" formControlName="firstName" #inputFirstName>
+            </div>
+            <div class="col-12 mt-2">
+                <input type="text" class="form-control" placeholder="Фамилия" formControlName="lastName" #inputLastName>
+            </div>
+            <div class="col-12 mt-2">
+                <input [textMask]="{mask: mask}" type="text" class="form-control" placeholder="Телефон" formControlName="phone" #inputPhone>
+            </div>
+            <div class="col-12 mt-2">
+                <button type="submit" class="btn btn-success" (click)="onAddPerson(inputFirstName, inputLastName, inputPhone)" [disabled]="personForm.invalid">Сохранить</button>
+            </div>
+        </div>
+    </form>
+</div>
