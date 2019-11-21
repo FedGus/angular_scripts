@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2 mb-2">{{inPerson.firstname}}</div>
+        <div class="col-2 mb-2">{{inPerson.lastname}}</div>
+        <div class="col-2 mb-2">{{inPerson.phone}}</div>
+        <div class="col-2 mb-2">{{inPerson.id}}</div>
+        
+
+        <div class="row" *ngIf=isEdit>
+            <div class="col-4 mb-2">
+                <input type="text" class="form-control" placeholder="Имя" [(ngModel)]="inPerson.firstname" #editFirstname>
+            </div>
+            <div class="col-4 mb-2">
+                <input type="text" class="form-control" placeholder="Фамилия" [(ngModel)]="inPerson.lastname" #editLastname>
+            </div>
+            <br>
+        </div>
+        <div class="col-2 mb-2"><button class="btn btn-primary" (click)="doPut(inPerson.id, {firstname: editFirstname}, {lastname: editLastname})">{{addEdit}}</button></div>
+        <div class="col-2"><button class="btn btn-danger" (click)="doDelete(inPerson.id)">Удалить</button></div>
+    </div>
+</div>
+

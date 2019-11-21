@@ -1,0 +1,22 @@
+{
+  "persons": [
+    {
+      "firstname": "Алексей",
+      "lastname": "Гусев",
+      "phone": "(879) 175-13-53",
+      "id": 1
+    },
+    {
+      "firstname": "Fedor",
+      "lastname": "Гусев",
+      "phone": "(791) 626-41-81",
+      "id": 2
+    },
+    {
+      "firstname": "Елена",
+      "lastname": "Гусева",
+      "phone": "(879) 165-75-63",
+      "id": 3
+    }
+  ]
+}
