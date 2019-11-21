@@ -3,7 +3,7 @@
       <h2>Добавление нового персонажа</h2>
     </div>
   </div>
-<div class="container">
+<div class="container" >
     <form [formGroup]="personForm">
         <div class="row">
             <div class="col-12">
@@ -16,7 +16,7 @@
                 <input [textMask]="{mask: mask}" type="text" class="form-control" placeholder="Телефон" formControlName="phone" #inputPhone>
             </div>
             <div class="col-12 mt-2">
-                <button type="submit" class="btn btn-success" (click)="doPost(inputFirstName, inputLastName, inputPhone)" [disabled]="personForm.invalid" >Сохранить</button> <!--(click)="onAddPerson(inputFirstName, inputLastName, inputPhone)"-->
+                <button type="submit" class="btn btn-success" (click)="doPost(inputFirstName, inputLastName, inputPhone)" [disabled]="personForm.invalid" (addperson)="onAddPerson($event)">Сохранить</button> <!--(click)="onAddPerson(inputFirstName, inputLastName, inputPhone)"-->
             </div>
         </div>
     </form>

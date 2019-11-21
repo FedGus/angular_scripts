@@ -1,6 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy,EventEmitter } from '@angular/core';
 import { Person } from './shared/models/person.model';
 import { PersonsService } from './shared/services/persons.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,7 @@ import { PersonsService } from './shared/services/persons.service';
 })
 
 export class AppComponent implements OnInit, OnDestroy {
+
   title = 'Персонажи';
   firstname_filter: boolean;
   search_firstname = "";

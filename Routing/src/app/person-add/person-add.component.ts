@@ -33,7 +33,8 @@ export class PersonAddComponent implements OnInit {
   public mask = ['(', /[1-9]/, /[1-9]/, /[1-9]/, ')', ' ', /[1-9]/, /[1-9]/, /[1-9]/, '-', /[1-9]/, /[1-9]/, '-', /[1-9]/, /[1-9]/];
 
   onAddPerson(inputFirstName, inputLastName, inputPhone) {
-    
+    let person = new Person(inputFirstName.value, inputLastName.value, inputPhone.value);
+    this.addperson.emit(person);
   } 
 
   async doPost(inputFirstName, inputLastName, inputPhone) {

@@ -5,12 +5,12 @@
     <h2>{{title}}</h2>
   </div>
 </div>
-<app-person-view [inPerson]="person" *ngFor="let person of persons | filterFirstName:search_firstname | filterLastName:search_lastname"(deleteperson)='onDeletePerson($event)' (addperson)="onAddPerson($event)">
+<app-person-view [inPerson]="person" *ngFor="let person of persons | filterFirstName:search_firstname | filterLastName:search_lastname"(deleteperson)='onDeletePerson($event)' >
 </app-person-view>
 
 <hr>
 
-<router-outlet ></router-outlet>
+<router-outlet></router-outlet>
 
 <!--<app-person-add  ></app-person-add> -->
 
